@@ -1,0 +1,68 @@
+{
+  "generateReport": "ವರದಿಯನ್ನು ತಯಾರಿಸಿ",
+  "selectLocation": "ಅಧಿಕಾರಿಗಳಿಗೆ ವಿಶ್ಲೇಷಣಾತ್ಮಕ ವರದಿಯನ್ನು ತಯಾರಿಸಲು ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  "searchLocation": "ಸ್ಥಳವನ್ನು ಹುಡುಕಿ",
+  "searchPlaceholder": "ನಗರ ಅಥವಾ ರಾಜ್ಯದ ಮೂಲಕ ಹುಡುಕಿ...",
+  "reports": "ವರದಿಗಳು",
+  "verified": "ಪರಿಶೀಲಿತ",
+  "activeHazards": "ಸಕ್ರಿಯ ಅಪಾಯಗಳು",
+  "primaryHazard": "ಪ್ರಾಥಮಿಕ ಅಪಾಯ",
+  "updated": "ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿದೆ",
+  "riskLevels": {
+    "low": "ಕಡಿಮೆ ಅಪಾಯ",
+    "medium": "ಮಧ್ಯಮ ಅಪಾಯ",
+    "high": "ಹೆಚ್ಚಿನ ಅಪಾಯ",
+    "critical": "ಗಂಭೀರ ಅಪಾಯ"
+  },
+  "locationPreview": "ಸ್ಥಳದ ಪೂರ್ವವೀಕ್ಷಣೆ",
+  "availableDataSources": "ಲಭ್ಯವಿರುವ ಡೇಟಾ ಮೂಲಗಳು",
+  "dataSources": {
+    "realTimeMonitoring": "ನೈಜ-ಸಮಯದ ಸಾಗರ ಮೇಲ್ವಿಚಾರಣೆ",
+    "citizenReports": "ನಾಗರಿಕ ವರದಿಗಳು",
+    "meteorologicalData": "ಹವಾಮಾನ ವಿಜ್ಞಾನ ಡೇಟಾ",
+    "satelliteImagery": "ಉಪಗ್ರಹ ಚಿತ್ರಣ",
+    "historicalDatabase": "ಐತಿಹಾಸಿಕ ಡೇಟಾಬೇಸ್",
+    "coastalObservation": "ಕರಾವಳಿ ವೀಕ್ಷಣಾ ಪೋಸ್ಟ್‌ಗಳು"
+  },
+  "generatingReport": "ವರದಿಯನ್ನು ತಯಾರಿಸುತ್ತಿದೆ...",
+  "reportTypes": {
+    "situationReport": "ಸ್ಥಿತಿ ವರದಿ",
+    "riskAssessment": "ಅಪಾಯ ಮೌಲ್ಯಮಾಪನ",
+    "forecastUpdate": "ಮುನ್ಸೂಚನೆ ಅಪ್‌ಡೇಟ್",
+    "emergencyAlert": "ತುರ್ತು ಎಚ್ಚರಿಕೆ"
+  },
+  "reportTypeDescriptions": {
+    "situationReport": "ಪ್ರಸ್ತುತ ಅಪಾಯದ ಸ್ಥಿತಿ ಮತ್ತು ಪರಿಸ್ಥಿತಿಗಳು",
+    "riskAssessment": "ಸಂಭಾವ್ಯ ಬೆದರಿಕೆಗಳು ಮತ್ತು ಪರಿಣಾಮಗಳ ವಿಶ್ಲೇಷಣೆ",
+    "forecastUpdate": "ಅಪ್‌ಡೇಟ್ ಮಾಡಿದ ಭವಿಷ್ಯವಾಣಿಗಳು ಮತ್ತು ಪ್ರಕ್ಷೇಪಗಳು",
+    "emergencyAlert": "ತಕ್ಷಣದ ಕ್ರಮದ ಅಗತ್ಯವಿರುವ ತುರ್ತು ಎಚ್ಚರಿಕೆ"
+  },
+  "backToLocation": "ಸ್ಥಳ ಆಯ್ಕೆಗೆ ಹಿಂತಿರುಗಿ",
+  "reportFor": "ಇದಕ್ಕಾಗಿ ವರದಿ:",
+  "generatedReport": "ತಯಾರಿಸಿದ ವರದಿ",
+  "reviewFinalize": "ಸ್ವಯಂ-ತಯಾರಿಸಿದ ವರದಿಯನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಅಂತಿಮಗೊಳಿಸಿ",
+  "reportTitle": "ವರದಿ ಶೀರ್ಷಿಕೆ",
+  "reportType": "ವರದಿ ಪ್ರಕಾರ",
+  "priorityLevel": "ಆದ್ಯತೆ ಮಟ್ಟ",
+  "confidenceLevel": "ವಿಶ್ವಾಸ ಮಟ್ಟ",
+  "validUntil": "ತನಕ ಮಾನ್ಯ",
+  "affectedRegions": "ಪರಿಣಾಮ ಬೀರಿದ ಪ್ರದೇಶಗಳು",
+  "hazardTypes": "ಅಪಾಯದ ಪ್ರಕಾರಗಳು",
+  "executiveSummary": "ಕಾರ್ಯನಿರ್ವಾಹಕ ಸಾರಾಂಶ",
+  "detailedAnalysis": "ವಿವರವಾದ ವಿಶ್ಲೇಷಣೆ",
+  "dataSourcesMethodology": "ಡೇಟಾ ಮೂಲಗಳು ಮತ್ತು ಕಾರ್ಯವಿಧಾನ",
+  "recommendationsActions": "ಶಿಫಾರಸುಗಳು ಮತ್ತು ಕ್ರಮಗಳು",
+  "reportTimestamped": "ವರದಿಯನ್ನು ಟೈಮ್‌ಸ್ಟ್ಯಾಂಪ್ ಮಾಡಲಾಗುತ್ತದೆ ಮತ್ತು ಲಾಗ್ ಮಾಡಲಾಗುತ್ತದೆ",
+  "finishReport": "ವರದಿಯನ್ನು ಮುಗಿಸಿ ಮತ್ತು ಪರಿಶೀಲಿಸಿ",
+  "priorityLevels": {
+    "low": "ಕಡಿಮೆ ಆದ್ಯತೆ",
+    "medium": "ಮಧ್ಯಮ ಆದ್ಯತೆ",
+    "high": "ಹೆಚ್ಚಿನ ಆದ್ಯತೆ",
+    "urgent": "ತುರ್ತು - ತಕ್ಷಣದ ಕ್ರಮ ಅಗತ್ಯ"
+  },
+  "confidenceLevels": {
+    "low": "ಕಡಿಮೆ ವಿಶ್ವಾಸ (60-70%)",
+    "medium": "ಮಧ್ಯಮ ವಿಶ್ವಾಸ (70-85%)",
+    "high": "ಹೆಚ್ಚಿನ ವಿಶ್ವಾಸ (85%+)"
+  }
+}

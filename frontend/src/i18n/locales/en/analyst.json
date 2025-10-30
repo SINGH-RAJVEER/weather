@@ -1,0 +1,68 @@
+{
+  "generateReport": "Generate Report",
+  "selectLocation": "Select a location to generate an analytical report for authorities",
+  "searchLocation": "Search Location",
+  "searchPlaceholder": "Search by city or state...",
+  "reports": "Reports",
+  "verified": "Verified",
+  "activeHazards": "Active Hazards",
+  "primaryHazard": "Primary Hazard",
+  "updated": "Updated",
+  "riskLevels": {
+    "low": "LOW RISK",
+    "medium": "MEDIUM RISK",
+    "high": "HIGH RISK",
+    "critical": "CRITICAL RISK"
+  },
+  "locationPreview": "Location Preview",
+  "availableDataSources": "Available Data Sources",
+  "dataSources": {
+    "realTimeMonitoring": "Real-time Ocean Monitoring",
+    "citizenReports": "Citizen Reports",
+    "meteorologicalData": "Meteorological Data",
+    "satelliteImagery": "Satellite Imagery",
+    "historicalDatabase": "Historical Database",
+    "coastalObservation": "Coastal Observation Posts"
+  },
+  "generatingReport": "Generating Report...",
+  "reportTypes": {
+    "situationReport": "Situation Report",
+    "riskAssessment": "Risk Assessment",
+    "forecastUpdate": "Forecast Update",
+    "emergencyAlert": "Emergency Alert"
+  },
+  "reportTypeDescriptions": {
+    "situationReport": "Current hazard status and conditions",
+    "riskAssessment": "Analysis of potential threats and impacts",
+    "forecastUpdate": "Updated predictions and projections",
+    "emergencyAlert": "Urgent warning requiring immediate action"
+  },
+  "backToLocation": "Back to Location Selection",
+  "reportFor": "Report for:",
+  "generatedReport": "Generated Report",
+  "reviewFinalize": "Review and finalize the auto-generated report",
+  "reportTitle": "Report Title",
+  "reportType": "Report Type",
+  "priorityLevel": "Priority Level",
+  "confidenceLevel": "Confidence Level",
+  "validUntil": "Valid Until",
+  "affectedRegions": "Affected Regions",
+  "hazardTypes": "Hazard Types",
+  "executiveSummary": "Executive Summary",
+  "detailedAnalysis": "Detailed Analysis",
+  "dataSourcesMethodology": "Data Sources & Methodology",
+  "recommendationsActions": "Recommendations & Actions",
+  "reportTimestamped": "Report will be timestamped and logged",
+  "finishReport": "Finish Report & Verify",
+  "priorityLevels": {
+    "low": "Low Priority",
+    "medium": "Medium Priority",
+    "high": "High Priority",
+    "urgent": "Urgent - Immediate Action Required"
+  },
+  "confidenceLevels": {
+    "low": "Low Confidence (60-70%)",
+    "medium": "Medium Confidence (70-85%)",
+    "high": "High Confidence (85%+)"
+  }
+}

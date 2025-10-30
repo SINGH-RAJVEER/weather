@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "dashboard": "Dashboard",
+    "reportHazard": "Report Hazard",
+    "liveMap": "Live Map",
+    "liveRiskScore": "Live Risk Score",
+    "officialReports": "Official Reports",
+    "analystReport": "Analyst Report",
+    "analytics": "Analytics"
+  }
+}

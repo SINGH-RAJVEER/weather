@@ -1,0 +1,67 @@
+{
+  "Chennai": {
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "coordinates": { "lat": 13.0827, "lng": 80.2707 },
+    "metrics": {
+      "totalReports": 45,
+      "verifiedReports": 32,
+      "activeHazards": 3,
+      "riskLevel": "high",
+      "dominantHazard": "High Waves",
+      "lastUpdate": "2 hours ago"
+    }
+  },
+  "Visakhapatnam": {
+    "city": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "coordinates": { "lat": 17.6868, "lng": 83.2185 },
+    "metrics": {
+      "totalReports": 28,
+      "verifiedReports": 21,
+      "activeHazards": 2,
+      "riskLevel": "medium",
+      "dominantHazard": "Storm Surge",
+      "lastUpdate": "1 hour ago"
+    }
+  },
+  "Cuddalore": {
+    "city": "Cuddalore",
+    "state": "Tamil Nadu",
+    "coordinates": { "lat": 11.748, "lng": 79.7714 },
+    "metrics": {
+      "totalReports": 38,
+      "verifiedReports": 29,
+      "activeHazards": 4,
+      "riskLevel": "critical",
+      "dominantHazard": "Swell Surge",
+      "lastUpdate": "30 minutes ago"
+    }
+  },
+  "Paradip": {
+    "city": "Paradip",
+    "state": "Odisha",
+    "coordinates": { "lat": 20.2648, "lng": 86.6947 },
+    "metrics": {
+      "totalReports": 22,
+      "verifiedReports": 18,
+      "activeHazards": 1,
+      "riskLevel": "low",
+      "dominantHazard": "Coastal Current",
+      "lastUpdate": "4 hours ago"
+    }
+  },
+  "Kochi": {
+    "city": "Kochi",
+    "state": "Kerala",
+    "coordinates": { "lat": 9.9312, "lng": 76.2673 },
+    "metrics": {
+      "totalReports": 19,
+      "verifiedReports": 15,
+      "activeHazards": 2,
+      "riskLevel": "medium",
+      "dominantHazard": "High Waves",
+      "lastUpdate": "3 hours ago"
+    }
+  }
+}

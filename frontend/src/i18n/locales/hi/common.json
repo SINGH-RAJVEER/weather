@@ -1,0 +1,37 @@
+{
+  "appName": "SHORE",
+  "appFullName": "स्थितिजन्य खतरा महासागर रिपोर्टिंग इंजन",
+  "language": "भाषा",
+  "settings": "सेटिंग",
+  "signOut": "साइन आउट",
+  "viewAll": "सभी देखें",
+  "cancel": "रद्द करें",
+  "back": "वापस",
+  "on": "को",
+  "loading": {
+    "default": "लोड हो रहा है...",
+    "mapData": "मैप डेटा लोड हो रहा है..."
+  },
+  "locations": {
+    "chennai": "चेन्नई, तमिल नाडु, भारत",
+    "mumbai": "मुंबई, महाराष्ट्र, भारत",
+    "kochi": "कोच्चि, केरल, भारत",
+    "visakhapatnam": "विशाखापत्तनम, आंध्र प्रदेश, भारत",
+    "kolkata": "कोलकाता, पश्चिम बंगाल, भारत"
+  },
+  "roles": {
+    "citizen": "नागरिक",
+    "official": "अधिकारी",
+    "analyst": "विश्लेषक"
+  },
+  "hazardTypes": {
+    "tsunami": "सुनामी",
+    "storm_surge": "तूफानी लहर",
+    "high_waves": "ऊंची लहरें",
+    "swell_surge": "स्वेल सर्ज",
+    "coastal_current": "तटीय धारा",
+    "flooding": "तटीय बाढ़",
+    "coastal_damage": "तटीय क्षति",
+    "other": "अन्य"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "appName": "SHORE",
+  "appFullName": "Situational Hazard Ocean Reporting Engine",
+  "language": "Language",
+  "settings": "Settings",
+  "signOut": "Sign Out",
+  "viewAll": "View All",
+  "cancel": "Cancel",
+  "back": "Back",
+  "on": "on",
+  "loading": {
+    "default": "Loading...",
+    "mapData": "Loading map data..."
+  },
+  "locations": {
+    "chennai": "Chennai, Tamil Nadu, India",
+    "mumbai": "Mumbai, Maharashtra, India",
+    "kochi": "Kochi, Kerala, India",
+    "visakhapatnam": "Visakhapatnam, Andhra Pradesh, India",
+    "kolkata": "Kolkata, West Bengal, India"
+  },
+  "roles": {
+    "citizen": "citizen",
+    "official": "official",
+    "analyst": "analyst"
+  },
+  "hazardTypes": {
+    "tsunami": "Tsunami",
+    "storm_surge": "Storm Surge",
+    "high_waves": "High Waves",
+    "swell_surge": "Swell Surge",
+    "coastal_current": "Coastal Current",
+    "flooding": "Coastal Flooding",
+    "coastal_damage": "Coastal Damage",
+    "other": "Other"
+  }
+}

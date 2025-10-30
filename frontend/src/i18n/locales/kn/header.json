@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "dashboard": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    "reportHazard": "ಅಪಾಯವನ್ನು ವರದಿ ಮಾಡಿ",
+    "liveMap": "ಲೈವ್ ಮ್ಯಾಪ್",
+    "liveRiskScore": "ಲೈವ್ ಅಪಾಯ ಸ್ಕೋರ್",
+    "officialReports": "ಅಧಿಕೃತ ವರದಿಗಳು",
+    "analystReport": "ವಿಶ್ಲೇಷಕ ವರದಿ",
+    "analytics": "ಅನಾಲಿಟಿಕ್ಸ್"
+  }
+}

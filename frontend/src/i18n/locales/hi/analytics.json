@@ -1,0 +1,63 @@
+{
+  "keyMetrics": "मुख्य मेट्रिक्स",
+  "totalReports": "कुल रिपोर्ट",
+  "fromLastMonth": "पिछले महीने से",
+  "verificationRate": "सत्यापन दर",
+  "improvement": "सुधार",
+  "activeUsers": "सक्रिय उपयोगकर्ता",
+  "growth": "वृद्धि",
+  "activeHazards": "सक्रिय खतरे",
+  "sinceYesterday": "कल से",
+  "hazardTrendsByMonth": "महीने के अनुसार खतरे के रुझान",
+  "severityDistribution": "गंभीरता वितरण",
+  "reportsByRegion": "क्षेत्र के अनुसार रिपोर्ट (स्कैटर)",
+  "dailyActivity": "दैनिक गतिविधि",
+  "recentActivitySummary": "हाल की गतिविधि सारांश",
+  "severity": {
+    "low": "कम",
+    "medium": "मध्यम",
+    "high": "उच्च",
+    "critical": "गंभीर"
+  },
+  "months": {
+    "jan": "जन",
+    "feb": "फर",
+    "mar": "मार",
+    "apr": "अप्र",
+    "may": "मई",
+    "jun": "जून"
+  },
+  "regions": {
+    "tamilNadu": "तमिल नाडु",
+    "andhraPradesh": "आंध्र प्रदेश",
+    "odisha": "ओडिशा",
+    "westBengal": "पश्चिम बंगाल",
+    "karnataka": "कर्नाटक"
+  },
+  "tableHeaders": {
+    "date": "दिनांक",
+    "region": "क्षेत्र",
+    "hazardType": "खतरे का प्रकार",
+    "severity": "गंभीरता",
+    "reports": "रिपोर्ट",
+    "status": "स्थिति"
+  },
+  "severityLevels": {
+    "low": "कम",
+    "medium": "मध्यम",
+    "high": "उच्च",
+    "critical": "गंभीर"
+  },
+  "hazardTypes": {
+    "highWaves": "ऊंची लहरें",
+    "stormSurge": "तूफानी लहर",
+    "coastalFlooding": "तटीय बाढ़",
+    "tsunami": "सुनामी",
+    "cyclone": "चक्रवात"
+  },
+  "statusTypes": {
+    "active": "सक्रिय",
+    "resolved": "हल हो गया",
+    "monitoring": "निगरानी"
+  }
+}

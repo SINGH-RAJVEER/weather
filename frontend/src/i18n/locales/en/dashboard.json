@@ -1,0 +1,95 @@
+{
+  "accessDenied": "Access denied.",
+  "totalReports": "Total Reports",
+  "verifiedReports": "Verified Reports",
+  "activeHazards": "Active Hazards",
+  "socialMentions": "Social Mentions",
+  "fromLastWeek": "from last week",
+  "inLastMinutes": "in last {{minutes}} minutes",
+  "live": "LIVE",
+  "lastUpdated": "Last updated",
+  "noRecentReports": "No recent reports",
+  "risk": "Risk",
+  "reports": "Reports",
+  "summary": "Summary",
+  "primaryHazard": "Primary observed hazard: {{hazard}}.",
+  "noDominantHazard": "No dominant hazard detected.",
+  "recentReportsCount": "There have been {{count}} recent reports in this area.",
+  "noCitizenReports": "No recent citizen reports.",
+  "recommendedActions": "Recommended actions",
+  "riskLevels": {
+    "low": "LOW",
+    "medium": "MEDIUM",
+    "high": "HIGH",
+    "critical": "CRITICAL"
+  },
+  "actions": {
+    "evacuatelowlyingareasimmediately": "Evacuate low-lying areas immediately",
+    "followdirectivesfromlocalauthoritiesanddisasterresponseteams": "Follow directives from local authorities and disaster response teams",
+    "avoidcoastalaccessandsmallcraftoperations": "Avoid coastal access and small craft operations",
+    "monitorofficialadvisoriesandstaytunedtolocalnews": "Monitor official advisories and stay tuned to local news",
+    "exercisecautionneartheshoreline": "Exercise caution near the shoreline",
+    "securelooseoutdooritemsandvessels": "Secure loose outdoor items and vessels",
+    "noimmediateactionstayinformed": "No immediate action; stay informed",
+    "avoidshorelineandbeachesuntilofficialallclear": "Avoid shoreline and beaches until official all-clear",
+    "followmunicipaladvisoriesanddonotattempttocrossfloodedroads": "Follow municipal advisories and do not attempt to cross flooded roads",
+    "securesmallcraftandmovevehiclestohigherground": "Secure small craft and move vehicles to higher ground"
+  },
+  "locationDetails": {
+    "Chennai": {
+      "headline": "Marina & Chennai Coastline",
+      "summary": "Chennai is experiencing elevated wave activity with intermittent strong onshore winds. Beach access is restricted in some areas and localized overtopping has been reported.",
+      "actions": [
+        "Avoid shoreline and beaches until official all-clear.",
+        "Follow municipal advisories and do not attempt to cross flooded roads.",
+        "Secure small craft and move vehicles to higher ground."
+      ]
+    },
+    "Cuddalore": {
+      "summary": "Cuddalore coast has reported a swell surge and water levels are elevated in low-lying zones. Expect fast-changing conditions near estuaries.",
+      "actions": [
+        "Evacuate ground-floor buildings in vulnerable zones.",
+        "Stay in touch with local emergency numbers."
+      ]
+    },
+    "Kasimedu": {
+      "summary": "Kasimedu fishing harbour shows signs of coastal erosion and harbor damage; boating operations suspended.",
+      "actions": [
+        "Do not venture into the harbor.",
+        "Report damaged vessels to port authorities."
+      ]
+    },
+    "Mumbai": {
+      "summary": "Mumbai is experiencing heavy rainfall and high tides. Waterlogging has been reported in several low-lying areas.",
+      "actions": [
+        "Avoid venturing out unless necessary.",
+        "Stay away from coastal areas and beaches.",
+        "Follow traffic advisories to avoid waterlogged streets."
+      ]
+    },
+    "Kochi": {
+      "summary": "Kochi is on alert for potential coastal flooding due to heavy rains and storm surge. Rescue teams are on standby.",
+      "actions": [
+        "Keep an emergency kit ready.",
+        "Stay informed through official channels.",
+        "Be prepared to evacuate if instructed by authorities."
+      ]
+    },
+    "Visakhapatnam": {
+      "summary": "Visakhapatnam is preparing for a cyclonic storm. Strong winds and heavy rainfall are expected.",
+      "actions": [
+        "Secure your home and move to a safe place.",
+        "Stay away from the coast and avoid fishing activities.",
+        "Follow instructions from the local administration."
+      ]
+    },
+    "Kolkata": {
+      "summary": "Kolkata is likely to be affected by a severe cyclonic storm. Heavy rainfall and strong winds are predicted.",
+      "actions": [
+        "Stay indoors and avoid unnecessary travel.",
+        "Keep emergency supplies and first-aid kits ready.",
+        "Follow the guidance of disaster management authorities."
+      ]
+    }
+  }
+}

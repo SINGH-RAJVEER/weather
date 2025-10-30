@@ -1,0 +1,68 @@
+{
+  "generateReport": "रिपोर्ट तैयार करें",
+  "selectLocation": "अधिकारियों के लिए विश्लेषणात्मक रिपोर्ट तैयार करने के लिए स्थान चुनें",
+  "searchLocation": "स्थान खोजें",
+  "searchPlaceholder": "शहर या राज्य के अनुसार खोजें...",
+  "reports": "रिपोर्ट",
+  "verified": "सत्यापित",
+  "activeHazards": "सक्रिय खतरे",
+  "primaryHazard": "प्राथमिक खतरा",
+  "updated": "अपडेट किया गया",
+  "riskLevels": {
+    "low": "कम जोखिम",
+    "medium": "मध्यम जोखिम",
+    "high": "उच्च जोखिम",
+    "critical": "गंभीर जोखिम"
+  },
+  "locationPreview": "स्थान पूर्वावलोकन",
+  "availableDataSources": "उपलब्ध डेटा स्रोत",
+  "dataSources": {
+    "realTimeMonitoring": "रियल-टाइम समुद्री निगरानी",
+    "citizenReports": "नागरिक रिपोर्ट",
+    "meteorologicalData": "मौसम विज्ञान डेटा",
+    "satelliteImagery": "उपग्रह इमेजरी",
+    "historicalDatabase": "ऐतिहासिक डेटाबेस",
+    "coastalObservation": "तटीय अवलोकन पोस्ट"
+  },
+  "generatingReport": "रिपोर्ट तैयार कर रहे हैं...",
+  "reportTypes": {
+    "situationReport": "स्थिति रिपोर्ट",
+    "riskAssessment": "जोखिम मूल्यांकन",
+    "forecastUpdate": "पूर्वानुमान अपडेट",
+    "emergencyAlert": "आपातकालीन अलर्ट"
+  },
+  "reportTypeDescriptions": {
+    "situationReport": "वर्तमान खतरे की स्थिति और परिस्थितियां",
+    "riskAssessment": "संभावित खतरों और प्रभावों का विश्लेषण",
+    "forecastUpdate": "अपडेटेड भविष्यवाणियां और अनुमान",
+    "emergencyAlert": "तत्काल कार्रवाई की आवश्यकता वाली चेतावनी"
+  },
+  "backToLocation": "स्थान चयन पर वापस",
+  "reportFor": "इसके लिए रिपोर्ट:",
+  "generatedReport": "तैयार की गई रिपोर्ट",
+  "reviewFinalize": "स्वतः तैयार की गई रिपोर्ट की समीक्षा और अंतिम रूप दें",
+  "reportTitle": "रिपोर्ट शीर्षक",
+  "reportType": "रिपोर्ट प्रकार",
+  "priorityLevel": "प्राथमिकता स्तर",
+  "confidenceLevel": "विश्वास स्तर",
+  "validUntil": "तक वैध",
+  "affectedRegions": "प्रभावित क्षेत्र",
+  "hazardTypes": "खतरे के प्रकार",
+  "executiveSummary": "कार्यकारी सारांश",
+  "detailedAnalysis": "विस्तृत विश्लेषण",
+  "dataSourcesMethodology": "डेटा स्रोत और कार्यप्रणाली",
+  "recommendationsActions": "सिफारिशें और कार्रवाई",
+  "reportTimestamped": "रिपोर्ट को टाइमस्टैम्प और लॉग किया जाएगा",
+  "finishReport": "रिपोर्ट समाप्त करें और सत्यापित करें",
+  "priorityLevels": {
+    "low": "कम प्राथमिकता",
+    "medium": "मध्यम प्राथमिकता",
+    "high": "उच्च प्राथमिकता",
+    "urgent": "तत्काल - तत्काल कार्रवाई आवश्यक"
+  },
+  "confidenceLevels": {
+    "low": "कम विश्वास (60-70%)",
+    "medium": "मध्यम विश्वास (70-85%)",
+    "high": "उच्च विश्वास (85%+)"
+  }
+}

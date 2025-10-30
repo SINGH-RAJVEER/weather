@@ -1,0 +1,63 @@
+{
+  "keyMetrics": "Key Metrics",
+  "totalReports": "Total Reports",
+  "fromLastMonth": "from last month",
+  "verificationRate": "Verification Rate",
+  "improvement": "improvement",
+  "activeUsers": "Active Users",
+  "growth": "growth",
+  "activeHazards": "Active Hazards",
+  "sinceYesterday": "since yesterday",
+  "hazardTrendsByMonth": "Hazard Trends by Month",
+  "severityDistribution": "Severity Distribution",
+  "reportsByRegion": "Reports by Region (Scatter)",
+  "dailyActivity": "Daily Activity",
+  "recentActivitySummary": "Recent Activity Summary",
+  "severity": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "critical": "Critical"
+  },
+  "months": {
+    "jan": "Jan",
+    "feb": "Feb",
+    "mar": "Mar",
+    "apr": "Apr",
+    "may": "May",
+    "jun": "Jun"
+  },
+  "regions": {
+    "tamilNadu": "Tamil Nadu",
+    "andhraPradesh": "Andhra Pradesh",
+    "odisha": "Odisha",
+    "westBengal": "West Bengal",
+    "karnataka": "Karnataka"
+  },
+  "tableHeaders": {
+    "date": "Date",
+    "region": "Region",
+    "hazardType": "Hazard Type",
+    "severity": "Severity",
+    "reports": "Reports",
+    "status": "Status"
+  },
+  "severityLevels": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "critical": "Critical"
+  },
+  "hazardTypes": {
+    "highWaves": "High Waves",
+    "stormSurge": "Storm Surge",
+    "coastalFlooding": "Coastal Flooding",
+    "tsunami": "Tsunami",
+    "cyclone": "Cyclone"
+  },
+  "statusTypes": {
+    "active": "Active",
+    "resolved": "Resolved",
+    "monitoring": "Monitoring"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Latest News & Updates",
+  "subtitle": "Real-time incident coverage and official advisories",
+  "latestNews": "Latest News & Updates",
+  "realTimeCoverage": "Real-time incident coverage and official advisories",
+  "allNews": "All News",
+  "breaking": "Breaking",
+  "updates": "Updates",
+
+  "relevant": "relevant",
+  "relevance": "relevant",
+  "showLess": "Show Less",
+  "viewAllArticles": "View All {{count}} Articles",
+  "viewAll": "View All {{count}} Articles",
+  "noNewsFound": "No news articles found for the selected category.",
+  "noArticles": "No news articles found for the selected category.",
+  "categories": {
+    "all": "All News",
+    "breaking": "Breaking",
+    "updates": "Updates",
+
+    "environment": "Environment",
+    "disaster": "Disaster",
+    "local": "Local",
+    "weather": "Weather"
+  }
+}

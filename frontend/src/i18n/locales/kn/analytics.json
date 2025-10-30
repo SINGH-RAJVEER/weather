@@ -1,0 +1,63 @@
+{
+  "keyMetrics": "ಮುಖ್ಯ ಮೆಟ್ರಿಕ್ಸ್",
+  "totalReports": "ಒಟ್ಟು ವರದಿಗಳು",
+  "fromLastMonth": "ಕಳೆದ ತಿಂಗಳಿಂದ",
+  "verificationRate": "ಪರಿಶೀಲನೆ ದರ",
+  "improvement": "ಸುಧಾರಣೆ",
+  "activeUsers": "ಸಕ್ರಿಯ ಬಳಕೆದಾರರು",
+  "growth": "ಬೆಳವಣಿಗೆ",
+  "activeHazards": "ಸಕ್ರಿಯ ಅಪಾಯಗಳು",
+  "sinceYesterday": "ನಿನ್ನೆಯಿಂದ",
+  "hazardTrendsByMonth": "ತಿಂಗಳ ಪ್ರಕಾರ ಅಪಾಯದ ಪ್ರವೃತ್ತಿಗಳು",
+  "severityDistribution": "ತೀವ್ರತೆಯ ವಿತರಣೆ",
+  "reportsByRegion": "ಪ್ರದೇಶದ ಪ್ರಕಾರ ವರದಿಗಳು (ಸ್ಕ್ಯಾಟರ್)",
+  "dailyActivity": "ದೈನಂದಿನ ಚಟುವಟಿಕೆ",
+  "recentActivitySummary": "ಇತ್ತೀಚಿನ ಚಟುವಟಿಕೆ ಸಾರಾಂಶ",
+  "severity": {
+    "low": "ಕಡಿಮೆ",
+    "medium": "ಮಧ್ಯಮ",
+    "high": "ಹೆಚ್ಚಿನ",
+    "critical": "ಗಂಭೀರ"
+  },
+  "months": {
+    "jan": "ಜನ",
+    "feb": "ಫೆಬ್",
+    "mar": "ಮಾರ್",
+    "apr": "ಏಪ್ರಿ",
+    "may": "ಮೇ",
+    "jun": "ಜೂನ್"
+  },
+  "regions": {
+    "tamilNadu": "ತಮಿಳುನಾಡು",
+    "andhraPradesh": "ಆಂಧ್ರಪ್ರದೇಶ",
+    "odisha": "ಒಡಿಶಾ",
+    "westBengal": "ಪಶ್ಚಿಮ ಬಂಗಾಳ",
+    "karnataka": "ಕರ್ನಾಟಕ"
+  },
+  "tableHeaders": {
+    "date": "ದಿನಾಂಕ",
+    "region": "ಪ್ರದೇಶ",
+    "hazardType": "ಅಪಾಯದ ಪ್ರಕಾರ",
+    "severity": "ತೀವ್ರತೆ",
+    "reports": "ವರದಿಗಳು",
+    "status": "ಸ್ಥಿತಿ"
+  },
+  "severityLevels": {
+    "low": "ಕಡಿಮೆ",
+    "medium": "ಮಧ್ಯಮ",
+    "high": "ಹೆಚ್ಚಿನ",
+    "critical": "ಗಂಭೀರ"
+  },
+  "hazardTypes": {
+    "highWaves": "ಎತ್ತರದ ಅಲೆಗಳು",
+    "stormSurge": "ಚಂಡಮಾರುತದ ಅಲೆ",
+    "coastalFlooding": "ಕರಾವಳಿ ಪ್ರವಾಹ",
+    "tsunami": "ಸುನಾಮಿ",
+    "cyclone": "ಚಂಡಮಾರುತ"
+  },
+  "statusTypes": {
+    "active": "ಸಕ್ರಿಯ",
+    "resolved": "ಪರಿಹರಿಸಲಾಗಿದೆ",
+    "monitoring": "ಮೇಲ್ವಿಚಾರಣೆ"
+  }
+}
