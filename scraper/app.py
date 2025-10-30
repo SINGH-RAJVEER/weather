@@ -39,7 +39,7 @@ load_dotenv(ROOT_DIR / "backend" / ".env")
 load_dotenv(ROOT_DIR / "scraper" / ".env", override=True)
 
 MONGODB_URI = os.getenv("MONGODB_URI") or os.getenv("MONGO_URL") or "mongodb://localhost:27017"
-DB_NAME = os.getenv("DB_NAME") or os.getenv("MONGO_DB") or "shore"
+DB_NAME = os.getenv("DB_NAME") or os.getenv("MONGO_DB") or "weather"
 CLASSIFIER_URL = (os.getenv("CLASSIFIER_URL") or "http://localhost:8000").rstrip("/")
 
 mongo_client = MongoClient(MONGODB_URI)

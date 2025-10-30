@@ -1,6 +1,6 @@
-# Copilot Instructions for SHORE
+# Copilot Instructions for Weather
 
-This guide enables AI coding agents to be productive in the SHORE codebase. It summarizes architecture, workflows, and conventions unique to this project.
+This guide enables AI coding agents to be productive in the Weather codebase. It summarizes architecture, workflows, and conventions unique to this project.
 
 ## Architecture Overview
 

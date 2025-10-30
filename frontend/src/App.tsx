@@ -27,7 +27,8 @@ const AppContent: React.FC = () => {
   const { user, isLoading: authLoading } = useAuth();
   const { isLoading: dataLoading, reports } = useData();
   const [currentPage, setCurrentPage] = useState("dashboard");
-  const [advisoryReportData, setAdvisoryReportData] = useState<AnalystReport | null>(null);
+  const [advisoryReportData, setAdvisoryReportData] =
+    useState<AnalystReport | null>(null);
 
   useEffect(() => {
     if (user) {
@@ -58,9 +59,9 @@ const AppContent: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center bg-gap-blue text-white">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-ocean-blue mx-auto mb-4"></div>
-          <h1 className="text-3xl font-bold mb-2">SHORE</h1>
+          <h1 className="text-3xl font-bold mb-2">Weather</h1>
           <p className="opacity-80">
-            Situational Hazard Ocean Reporting Engine
+            Weather Reporting Engine
           </p>
         </div>
       </div>

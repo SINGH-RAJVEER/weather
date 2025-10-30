@@ -41,7 +41,7 @@ export const AuthForm: React.FC = () => {
       <div className="absolute top-1 left-8 z-20">
         <img
           src="/icon.svg"
-          alt="SHORE Logo"
+          alt="Weather Logo"
           className="h-40 w-40 drop-shadow-2xl"
         />
       </div>
