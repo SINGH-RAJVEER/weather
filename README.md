@@ -1,9 +1,8 @@
-# S.H.O.R.E. -> Situational Hazard Ocean Reporting Engine
+# Weather Reporting Engine
 
 ## Rules
 
 - Mention in the commit message if any part being pushed is "vibe coded" for better backtracking when needed.
-
 - Fork the repo before starting work of the project and create a pull request frequently.
 
 ## To run the application
