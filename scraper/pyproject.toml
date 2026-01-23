@@ -106,5 +106,5 @@ dependencies = [
 	"yarl",
 	"zope.interface",
 	"dotenv",
-	"json",
+	"undetected-chromedriver>=3.5.5",
 ]
