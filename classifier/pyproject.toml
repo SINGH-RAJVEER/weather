@@ -70,6 +70,7 @@ dependencies = [
 	"pyparsing",
 	"PySocks",
 	"python-dateutil",
+	"python-dotenv>=1.2.1",
 	"python-slugify",
 	"pytz",
 	"PyYAML",
