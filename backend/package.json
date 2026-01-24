@@ -20,7 +20,7 @@
     "typescript": "^5.9.2"
   },
   "scripts": {
-    "start": "bun run index.ts",
+    "dev": "bun run index.ts",
     "lint": "eslint . --ext .ts"
   },
   "dependencies": {
