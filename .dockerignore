@@ -74,5 +74,3 @@ LICENSE
 .editorconfig
 .prettierrc
 .eslintrc
-biome.json
-turbo.json

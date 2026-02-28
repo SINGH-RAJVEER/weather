@@ -62,17 +62,16 @@ services:
   web:
     container_name: weather-web
     build:
-      c_file:
+      context: .
+      dockerfile: docker/Dockerfile.web
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    env_file:
       - .env
     environment:
       - NODE_ENV=${NODE_ENV:-development}
       - VITE_API_URL=${VITE_API_URL:-http://localhost:3001}
-      - VITE_GOOGLE_MAPS_API_KEY=${VITE_GOOGLE_MAPS_API_KEY}
-    ports:
-      - "5173:5173"
-    environment:
-      - NODE_ENV=development
-      - VITE_API_URL=http://localhost:3001
     volumes:
       - ./apps/web:/app/apps/web
       - ./packages:/app/packages
@@ -87,7 +86,10 @@ services:
     container_name: weather-classifier
     build:
       context: .
-      doc${CLASSIFIER_PORT:-8000}:${CLASSIFIER_PORT:-8000}"
+      dockerfile: docker/Dockerfile.classifier
+    restart: unless-stopped
+    ports:
+      - "${CLASSIFIER_PORT:-8000}:${CLASSIFIER_PORT:-8000}"
     env_file:
       - .env
     environment:
@@ -98,13 +100,22 @@ services:
       - MODEL_PATH=${MODEL_PATH}
       - MODEL_NAME=${MODEL_NAME}
       - HUGGINGFACE_TOKEN=${HUGGINGFACE_TOKEN}
-    environment:
-      - PYTHONUNBUFFERED=1
-      - ENVIRONMENT=development
     volumes:
       - ./apps/classifier:/app/apps/classifier
+    depends_on:
+      - mongodb
     networks:
-      - w${SCRAPER_PORT:-8001}:${SCRAPER_PORT:-8001}"
+      - weather-network
+
+  # Scraper Service
+  scraper:
+    container_name: weather-scraper
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.scraper
+    restart: unless-stopped
+    ports:
+      - "${SCRAPER_PORT:-8001}:${SCRAPER_PORT:-8001}"
     env_file:
       - .env
     environment:
@@ -125,17 +136,7 @@ services:
       - ./apps/scraper:/app/apps/scraper
     depends_on:
       - mongodb
-      - classifi
-      context: .
-      dockerfile: docker/Dockerfile.scraper
-    restart: unless-stopped
-    ports:
-      - "8001:8001"
-    environment:
-      - PYTHONUNBUFFERED=1
-      - ENVIRONMENT=development
-    volumes:
-      - ./apps/scraper:/app/apps/scraper
+      - classifier
     networks:
       - weather-network
 
