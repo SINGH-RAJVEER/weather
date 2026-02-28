@@ -1,0 +1,28 @@
+# Development Dockerfile for Scraper service
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install uv for fast Python package management
+RUN pip install --no-cache-dir uv
+
+# Copy scraper app
+COPY apps/scraper /app/apps/scraper
+
+# Set working directory to scraper app
+WORKDIR /app/apps/scraper
+
+# Install Python dependencies using uv
+RUN uv pip install --system -e .
+
+# Expose port (if the scraper has an API)
+EXPOSE 8001
+
+# Run the scraper service
+CMD ["python", "-m", "src"]

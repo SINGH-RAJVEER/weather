@@ -1,5 +1,5 @@
 {
-  "extends": "../../packages/config-typescript/react.json",
+  "extends": "@weather/config-typescript/react.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "module": "esnext",
@@ -23,5 +23,10 @@
     }
   },
   "include": ["src/**/*", "App.tsx", "index.ts", "*.d.ts"],
-  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "tailwind.config.js"]
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "tailwind.config.js"
+  ]
 }

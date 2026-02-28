@@ -1,0 +1,150 @@
+version: "3.8"
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: weather-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    env_file:
+      - .env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME:-admin}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD:-password}
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE:-weather}
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+    networks:
+      - weather-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend APIs Service
+  apis:
+    container_name: weather-apis
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.apis
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3001}:${PORT:-3001}"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - PORT=${PORT:-3001}
+      - MONGODB_URI=mongodb://${MONGO_INITDB_ROOT_USERNAME:-admin}:${MONGO_INITDB_ROOT_PASSWORD:-password}@mongodb:27017
+      - DB_NAME=${DB_NAME:-weather}
+      - BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET}
+      - BETTER_AUTH_URL=${BETTER_AUTH_URL:-http://localhost:3001}
+      - SESSION_SECRET=${SESSION_SECRET}
+      - JWT_SECRET=${JWT_SECRET}
+      - CORS_ORIGINS=${CORS_ORIGINS}
+    volumes:
+      - ./apps/apis:/app/apps/apis
+      - ./packages:/app/packages
+      - /app/node_modules
+      - /app/apps/apis/node_modules
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - weather-network
+    command: ["bun", "run", "dev"]
+
+  # Frontend Web Service
+  web:
+    container_name: weather-web
+    build:
+      c_file:
+      - .env
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - VITE_API_URL=${VITE_API_URL:-http://localhost:3001}
+      - VITE_GOOGLE_MAPS_API_KEY=${VITE_GOOGLE_MAPS_API_KEY}
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+      - VITE_API_URL=http://localhost:3001
+    volumes:
+      - ./apps/web:/app/apps/web
+      - ./packages:/app/packages
+      - /app/node_modules
+      - /app/apps/web/node_modules
+    networks:
+      - weather-network
+    command: ["bun", "run", "dev", "--host", "0.0.0.0"]
+
+  # Classifier Service
+  classifier:
+    container_name: weather-classifier
+    build:
+      context: .
+      doc${CLASSIFIER_PORT:-8000}:${CLASSIFIER_PORT:-8000}"
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=${PYTHONUNBUFFERED:-1}
+      - ENVIRONMENT=${ENVIRONMENT:-development}
+      - CLASSIFIER_PORT=${CLASSIFIER_PORT:-8000}
+      - CLASSIFIER_HOST=${CLASSIFIER_HOST:-0.0.0.0}
+      - MODEL_PATH=${MODEL_PATH}
+      - MODEL_NAME=${MODEL_NAME}
+      - HUGGINGFACE_TOKEN=${HUGGINGFACE_TOKEN}
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ENVIRONMENT=development
+    volumes:
+      - ./apps/classifier:/app/apps/classifier
+    networks:
+      - w${SCRAPER_PORT:-8001}:${SCRAPER_PORT:-8001}"
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=${PYTHONUNBUFFERED:-1}
+      - ENVIRONMENT=${ENVIRONMENT:-development}
+      - SCRAPER_PORT=${SCRAPER_PORT:-8001}
+      - SCRAPER_HOST=${SCRAPER_HOST:-0.0.0.0}
+      - MONGODB_URI=mongodb://${MONGO_INITDB_ROOT_USERNAME:-admin}:${MONGO_INITDB_ROOT_PASSWORD:-password}@mongodb:27017
+      - DB_NAME=${DB_NAME:-weather}
+      - CLASSIFIER_URL=http://classifier:${CLASSIFIER_PORT:-8000}
+      - SCRAPER_BACKOFF_SECONDS=${SCRAPER_BACKOFF_SECONDS}
+      - SCRAPER_MAX_BACKOFF_SECONDS=${SCRAPER_MAX_BACKOFF_SECONDS}
+      - SCRAPER_STALL_TIMEOUT_SECONDS=${SCRAPER_STALL_TIMEOUT_SECONDS}
+      - TWITTER_API_KEY=${TWITTER_API_KEY}
+      - TWITTER_API_SECRET=${TWITTER_API_SECRET}
+      - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN}
+    volumes:
+      - ./apps/scraper:/app/apps/scraper
+    depends_on:
+      - mongodb
+      - classifi
+      context: .
+      dockerfile: docker/Dockerfile.scraper
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ENVIRONMENT=development
+    volumes:
+      - ./apps/scraper:/app/apps/scraper
+    networks:
+      - weather-network
+
+volumes:
+  mongodb_data:
+    driver: local
+  mongodb_config:
+    driver: local
+
+networks:
+  weather-network:
+    driver: bridge

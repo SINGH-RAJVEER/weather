@@ -1,0 +1,26 @@
+# Development Dockerfile for Web frontend
+FROM oven/bun:1.1.38-alpine
+
+WORKDIR /app
+
+# Copy root package files
+COPY package.json bun.lockb* ./
+COPY turbo.json biome.json ./
+
+# Copy workspace packages
+COPY packages ./packages
+
+# Copy web app
+COPY apps/web ./apps/web
+
+# Install dependencies for the entire monorepo
+RUN bun install
+
+# Expose Vite dev server port
+EXPOSE 5173
+
+# Set working directory to web app
+WORKDIR /app/apps/web
+
+# Start development server with host flag to allow Docker network access
+CMD ["bun", "run", "dev", "--host", "0.0.0.0"]

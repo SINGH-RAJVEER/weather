@@ -1,11 +1,13 @@
 {
   "name": "@weather/config-typescript",
   "version": "1.0.0",
+  "description": "Global TypeScript configuration for Weather",
   "main": "base.json",
   "files": [
     "base.json",
-    "nextjs.json",
+    "node.json",
     "react.json",
-    "node.json"
+    "nextjs.json",
+    "vite-config.json"
   ]
 }

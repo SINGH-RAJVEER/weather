@@ -1,0 +1,52 @@
+# Dependencies
+
+node_modules
+.pnp
+.pnp.js
+bun.lockb
+
+# Testing
+
+coverage
+\*.log
+
+# Development
+
+.env
+
+# Build output
+
+dist
+build
+\*.tsbuildinfo
+
+# IDE
+
+.vscode
+.idea
+_.swp
+_.swo
+\*~
+
+# OS
+
+.DS_Store
+Thumbs.db
+
+# Git
+
+.git
+.gitignore
+.gitattributes
+
+# Docker
+
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+
+README.md
+docs
+\*.md

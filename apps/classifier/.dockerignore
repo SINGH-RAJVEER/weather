@@ -1,0 +1,72 @@
+# Python
+
+**pycache**
+_.py[cod]
+_$py.class
+_.so
+.Python
+_.egg-info
+dist
+build
+\*.egg
+.pytest_cache
+.coverage
+htmlcov
+
+# Virtual environments
+
+venv
+env
+ENV
+.venv
+
+# Development
+
+.env
+.env.local
+\*.log
+
+# IDE
+
+.vscode
+.idea
+_.swp
+_.swo
+\*~
+
+# OS
+
+.DS_Store
+Thumbs.db
+
+# Git
+
+.git
+.gitignore
+.gitattributes
+
+# Docker
+
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+
+README.md
+docs
+\*.md
+
+# Data (optional, include if data should not be in image)
+
+# data/\*.csv
+
+# models/
+
+# Legacy
+
+\_legacy
+
+# Tests
+
+tests

@@ -1,0 +1,26 @@
+# Development Dockerfile for APIs service
+FROM oven/bun:1.1.38-alpine
+
+WORKDIR /app
+
+# Copy root package files
+COPY package.json bun.lockb* ./
+COPY turbo.json biome.json ./
+
+# Copy workspace packages
+COPY packages ./packages
+
+# Copy apis app
+COPY apps/apis ./apps/apis
+
+# Install dependencies for the entire monorepo
+RUN bun install
+
+# Expose port
+EXPOSE 3001
+
+# Set working directory to apis app
+WORKDIR /app/apps/apis
+
+# Start development server
+CMD ["bun", "run", "dev"]
