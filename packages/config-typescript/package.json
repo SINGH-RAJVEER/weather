@@ -1,0 +1,11 @@
+{
+  "name": "@weather/config-typescript",
+  "version": "1.0.0",
+  "main": "base.json",
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react.json",
+    "node.json"
+  ]
+}

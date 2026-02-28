@@ -1,0 +1,11 @@
+{
+  "extends": "@weather/config-typescript/node.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "allowJs": true,
+    "noEmit": false
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
