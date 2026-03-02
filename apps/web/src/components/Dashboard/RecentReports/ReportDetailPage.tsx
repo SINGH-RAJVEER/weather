@@ -1,3 +1,4 @@
+import { getMockCommentsForReport } from "@/utils/commentGenerator";
 import type { Comment, HazardReport } from "@weather/types";
 import {
   AlertTriangle,
@@ -14,7 +15,6 @@ import {
 import type React from "react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { getMockCommentsForReport } from "@/utils/commentGenerator";
 import { formatDate, hazardTypeLabels, severityColors } from "../../../utils";
 
 interface ReportDetailPageProps {

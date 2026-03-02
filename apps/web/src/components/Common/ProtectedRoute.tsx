@@ -17,7 +17,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, allowedRoles 
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="flex items-center justify-center space-x-2">
-          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
           <span>{t("pleaseWait")}</span>
         </div>
       </div>

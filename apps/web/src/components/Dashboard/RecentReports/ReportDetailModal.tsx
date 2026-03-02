@@ -1,3 +1,11 @@
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import type { HazardReport } from "@weather/types";
 import {
   AlertTriangle,
@@ -11,14 +19,6 @@ import {
 import type React from "react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { formatDate, hazardTypeLabels, severityColors } from "../../../utils";
 
 interface ReportDetailModalProps {

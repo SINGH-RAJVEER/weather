@@ -16,7 +16,7 @@ export const SocialMonitor: React.FC = () => {
   const [savedPosts, setSavedPosts] = React.useState<Set<string>>(new Set());
 
   const fetchRelevantTweets = React.useCallback(async (keywords: string[]) => {
-    const base = `http://localhost:3000/api/tweets/relevant`;
+    const base = "http://localhost:3000/api/tweets/relevant";
     const params = new URLSearchParams();
     if (keywords.length) {
       params.set("keywords", keywords.join(","));

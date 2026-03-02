@@ -5,7 +5,7 @@ import {
   Clock,
   FileText,
   Loader,
-  Map,
+  Map as MapIcon,
   MapPin,
   Target,
   Waves,
@@ -180,12 +180,12 @@ export const LocationSelection: React.FC<LocationSelectionProps> = ({
 
             <div className="mb-6">
               <h4 className="text-sm font-medium text-neutral-700 mb-3 flex items-center space-x-2">
-                <Map className="h-4 w-4" />
+                <MapIcon className="h-4 w-4" />
                 <span>Location Preview</span>
               </h4>
               <div className="relative bg-gradient-to-br from-blue-100 to-green-100 rounded-lg h-48 overflow-hidden border border-blue-200">
                 <div className="absolute inset-0 opacity-30">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-200 via-blue-100 to-green-100"></div>
+                  <div className="w-full h-full bg-gradient-to-br from-blue-200 via-blue-100 to-green-100" />
                 </div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <div className="relative">
@@ -199,7 +199,7 @@ export const LocationSelection: React.FC<LocationSelectionProps> = ({
                               ? "bg-yellow-500"
                               : "bg-green-500"
                       }`}
-                    ></div>
+                    />
                     <div
                       className={`absolute inset-0 rounded-full ${
                         selectedLocation.metrics.riskLevel === "critical"
@@ -210,7 +210,7 @@ export const LocationSelection: React.FC<LocationSelectionProps> = ({
                               ? "bg-yellow-500"
                               : "bg-green-500"
                       } opacity-30 animate-ping`}
-                    ></div>
+                    />
                   </div>
                 </div>
 
@@ -223,7 +223,7 @@ export const LocationSelection: React.FC<LocationSelectionProps> = ({
                       top: `${35 + i * 10}%`,
                     }}
                   >
-                    <div className="w-3 h-3 bg-orange-400 rounded-full border border-white shadow-sm"></div>
+                    <div className="w-3 h-3 bg-orange-400 rounded-full border border-white shadow-sm" />
                   </div>
                 ))}
 

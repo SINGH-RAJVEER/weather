@@ -87,6 +87,7 @@ weather/
 │   ├── classifier/     # ML disaster classifier (Python)
 │   └── scraper/        # Social media scraper (Python + Scrapy)
 ├── packages/
+│   ├── shared/         # Shared code (contexts, utils, API clients, hooks)
 │   ├── config-typescript/  # Shared TypeScript configs
 │   ├── database/       # Shared database models
 │   └── types/          # Shared TypeScript types
@@ -139,6 +140,7 @@ weather/
 
 ### Shared Packages
 
+- **@weather/shared** - Common utilities, contexts, API clients, and hooks used by web and mobile apps
 - **@weather/database** - MongoDB models and connection
 - **@weather/types** - Shared TypeScript types
 - **@weather/config-typescript** - TS configs for all apps

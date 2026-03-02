@@ -1,11 +1,11 @@
 import {
   AnalystReport,
-  connectDB,
-  db,
   HazardReport,
-  mongoClient,
   NewsArticle,
   PublicAdvisory,
+  connectDB,
+  db,
+  mongoClient,
 } from "@weather/database";
 import { initializeAuth } from "./utils/auth";
 

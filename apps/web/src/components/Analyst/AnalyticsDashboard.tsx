@@ -92,7 +92,7 @@ export const AnalyticsDashboard: React.FC = () => {
   const [appliedKeywords, _setAppliedKeywords] = React.useState<string[]>([]);
 
   const fetchRelevantTweets = React.useCallback(async (keywords: string[]) => {
-    const base = `http://localhost:5001/tweets/relevant`;
+    const base = "http://localhost:5001/tweets/relevant";
     const params = new URLSearchParams();
     if (keywords.length) {
       params.set("keywords", keywords.join(","));

@@ -42,21 +42,20 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
         default:
           return id;
       }
-    } else {
-      switch (id) {
-        case "map":
-          return "Live Map";
-        case "official-reports":
-          return "Official Reports";
-        case "analyst-report":
-          return "Analyst Report";
-        case "analytics":
-          return "Analytics";
-        case "social-monitor":
-          return "Social Monitor";
-        default:
-          return id;
-      }
+    }
+    switch (id) {
+      case "map":
+        return "Live Map";
+      case "official-reports":
+        return "Official Reports";
+      case "analyst-report":
+        return "Analyst Report";
+      case "analytics":
+        return "Analytics";
+      case "social-monitor":
+        return "Social Monitor";
+      default:
+        return id;
     }
   };
 

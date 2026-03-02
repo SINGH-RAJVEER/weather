@@ -1,11 +1,11 @@
-import type { Layer, Map } from "leaflet";
+import type { Layer, Map as LeafletMap } from "leaflet";
 import * as L from "leaflet";
 import type React from "react";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import "leaflet.heat";
-import type { HWAReport, LayerToggle } from "@weather/types";
 import { Button } from "@/components/ui/button";
+import type { HWAReport, LayerToggle } from "@weather/types";
 
 // helper to get numeric intensity from color or severity
 const intensityFromReport = (r: HWAReport) => {
@@ -36,7 +36,7 @@ const coastalBoxes = [
 ];
 
 const LiveRiskScore: React.FC = () => {
-  const mapRef = useRef<Map | null>(null);
+  const mapRef = useRef<LeafletMap | null>(null);
   const riskRef = useRef<Layer | null>(null);
   const swellHeatRef = useRef<Layer | null>(null);
   const swellDotsRef = useRef<Layer | null>(null);
@@ -50,7 +50,7 @@ const LiveRiskScore: React.FC = () => {
     density: false,
   });
 
-  var isMenuOpen = false;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const fetchHazardData = async () => {
     try {
@@ -64,7 +64,7 @@ const LiveRiskScore: React.FC = () => {
   fetchHazardData();
 
   // density points for that layer random
-  const densityPoints = () => {
+  const densityPoints = useCallback(() => {
     const pts: [number, number, number][] = [];
     const total = 200;
     for (let i = 0; i < total; i++) {
@@ -75,7 +75,7 @@ const LiveRiskScore: React.FC = () => {
       pts.push([lat, lon, intensity]);
     }
     return pts;
-  };
+  }, []);
 
   useEffect(() => {
     if (!mapRef.current) {
@@ -318,7 +318,7 @@ const LiveRiskScore: React.FC = () => {
       <Button
         variant="outline"
         className="absolute top-4 right-4 z-[2200] p-3 bg-blue-600/90 text-white backdrop-blur-sm rounded-md shadow-lg hover:bg-blue-700/90 transition-colors duration-200"
-        onClick={() => (isMenuOpen = !isMenuOpen)}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -343,7 +343,7 @@ const LiveRiskScore: React.FC = () => {
             <Button
               variant="ghost"
               className="p-2 text-gray-600 dark:text-white hover:bg-gray-200/70 dark:hover:bg-gray-700/70"
-              onClick={() => (isMenuOpen = false)}
+              onClick={() => setIsMenuOpen(false)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

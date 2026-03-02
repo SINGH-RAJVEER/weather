@@ -7,11 +7,14 @@ WORKDIR /app
 COPY package.json bun.lockb* ./
 COPY turbo.json biome.json ./
 
-# Copy workspace packages
+# Copy workspace packages (includes shared, types, config-typescript, database)
 COPY packages ./packages
 
 # Copy web app
 COPY apps/web ./apps/web
+
+# Native build deps for packages like better-sqlite3 (node-gyp)
+RUN apk add --no-cache python3 make g++
 
 # Install dependencies for the entire monorepo
 RUN bun install

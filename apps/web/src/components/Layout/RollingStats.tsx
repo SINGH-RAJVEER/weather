@@ -45,8 +45,8 @@ export const RollingStats: React.FC<RollingStatsProps> = ({ stats, isLoading, cl
               key={i}
               className="flex items-center py-0.5 px-4 mr-4 bg-white rounded-md shadow-xs loading-pulse"
             >
-              <div className="h-4 bg-neutral-200 rounded-sm w-1/4"></div>
-              <div className="h-4 bg-neutral-200 rounded-sm w-1/2 ml-2"></div>
+              <div className="h-4 bg-neutral-200 rounded-sm w-1/4" />
+              <div className="h-4 bg-neutral-200 rounded-sm w-1/2 ml-2" />
             </div>
           ))}
         </div>

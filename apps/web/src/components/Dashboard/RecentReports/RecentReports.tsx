@@ -56,8 +56,8 @@ export const RecentReports: React.FC<RecentReportsProps> = ({
         <div className="space-y-4">
           {[...Array(3)].map((_, i) => (
             <div key={i} className="p-4 border border-neutral-200 rounded-lg loading-pulse">
-              <div className="h-4 bg-neutral-200 rounded-sm mb-2"></div>
-              <div className="h-3 bg-neutral-200 rounded-sm w-2/3"></div>
+              <div className="h-4 bg-neutral-200 rounded-sm mb-2" />
+              <div className="h-3 bg-neutral-200 rounded-sm w-2/3" />
             </div>
           ))}
         </div>

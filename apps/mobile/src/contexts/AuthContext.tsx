@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { AuthContextType, User } from "@weather/types";
 import type { PropsWithChildren } from "react";
-import { createContext, useContext, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useMemo, useState } from "react";
 import { normalizeDbUser } from "../api/dbAdapters";
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -18,7 +18,7 @@ export default function AuthProvider({ children }: PropsWithChildren) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const login = async (email: string) => {
+  const login = useCallback(async (email: string) => {
     setIsLoading(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -42,42 +42,48 @@ export default function AuthProvider({ children }: PropsWithChildren) {
     }
 
     setIsLoading(false);
-  };
+  }, []);
 
-  const register = async (email: string, _password: string, name: string, role: User["role"]) => {
-    setIsLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  const register = useCallback(
+    async (email: string, _password: string, name: string, role: User["role"]) => {
+      setIsLoading(true);
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    const newUser = normalizeDbUser({
-      id: Math.random().toString(36).substr(2, 9),
-      email,
-      name,
-      role,
-    });
+      const newUser = normalizeDbUser({
+        id: Math.random().toString(36).substr(2, 9),
+        email,
+        name,
+        role,
+      });
 
-    setUser(newUser);
+      setUser(newUser);
 
-    try {
-      await AsyncStorage.setItem("incois_user", JSON.stringify(newUser));
-    } catch (error) {
-      console.error("Error storing user:", error);
-    }
+      try {
+        await AsyncStorage.setItem("incois_user", JSON.stringify(newUser));
+      } catch (error) {
+        console.error("Error storing user:", error);
+      }
 
-    setIsLoading(false);
-  };
+      setIsLoading(false);
+    },
+    []
+  );
 
-  const logout = async () => {
+  const logout = useCallback(async () => {
     setUser(null);
     try {
       await AsyncStorage.removeItem("incois_user");
     } catch (error) {
       console.error("Error removing user:", error);
     }
-  };
+  }, []);
 
-  const updateUserProfile: AuthContextType["updateUserProfile"] = async (updatedUser) => {
-    setUser((prev) => (prev ? { ...prev, ...updatedUser } : prev));
-  };
+  const updateUserProfile: AuthContextType["updateUserProfile"] = useCallback(
+    async (updatedUser) => {
+      setUser((prev) => (prev ? { ...prev, ...updatedUser } : prev));
+    },
+    []
+  );
 
   const uploadProfilePicture: AuthContextType["uploadProfilePicture"] = async () => {
     return;
@@ -96,7 +102,7 @@ export default function AuthProvider({ children }: PropsWithChildren) {
       uploadProfilePicture,
       isLoading,
     }),
-    [user, isLoading, login, logout, register, updateUserProfile, uploadProfilePicture]
+    [user, isLoading, login, logout, register, updateUserProfile]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

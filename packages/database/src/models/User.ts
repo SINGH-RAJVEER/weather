@@ -42,8 +42,8 @@ userSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
   transform: (_doc, ret: any) => {
-    delete ret._id;
-    delete ret.password;
+    ret._id = undefined;
+    ret.password = undefined;
   },
 });
 
@@ -51,8 +51,8 @@ userSchema.set("toObject", {
   virtuals: true,
   versionKey: false,
   transform: (_doc, ret: any) => {
-    delete ret._id;
-    delete ret.password;
+    ret._id = undefined;
+    ret.password = undefined;
   },
 });
 

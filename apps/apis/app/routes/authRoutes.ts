@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { db, type IUser, User } from "@weather/database";
+import { type IUser, User, db } from "@weather/database";
 import bcrypt from "bcryptjs";
 import { type Request, type Response, Router } from "express";
 import { getAuth } from "../utils/auth";

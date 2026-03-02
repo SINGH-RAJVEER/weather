@@ -1,0 +1,24 @@
+{
+  "name": "@weather/shared",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./contexts": "./src/contexts/index.ts",
+    "./hooks": "./src/hooks/index.ts",
+    "./utils": "./src/utils/index.ts",
+    "./api": "./src/api/index.ts",
+    "./constants": "./src/constants/index.ts"
+  },
+  "scripts": {
+    "lint": "biome check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@weather/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@weather/config-typescript": "workspace:*",
+    "typescript": "^5.7.2"
+  }
+}

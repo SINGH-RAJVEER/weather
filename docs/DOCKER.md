@@ -55,6 +55,30 @@ Located in the `docker/` directory:
 - **Dockerfile.classifier** - Disaster classification service (Python)
 - **Dockerfile.scraper** - Twitter scraping service (Python)
 
+## Monorepo Structure & Shared Packages
+
+This project uses a monorepo structure with shared packages:
+
+- **@weather/shared** - Common utilities, contexts, API clients, and hooks shared between web and mobile
+- **@weather/types** - TypeScript type definitions
+- **@weather/database** - Database models and connections
+- **@weather/config-typescript** - Shared TypeScript configurations
+
+The Dockerfiles copy the entire `packages/` directory to ensure all workspace dependencies are available. Volume mounts in `docker-compose.yml` allow hot-reloading of shared package changes during development.
+
+**When adding packages:**
+
+```bash
+# Add a dependency to a specific app
+cd apps/web && bun add package-name
+
+# Add a dependency to shared package
+cd packages/shared && bun add package-name
+
+# After adding dependencies, may need to rebuild
+docker compose build [service-name]
+```
+
 ## Docker Compose Services
 
 ### mongodb
@@ -250,6 +274,7 @@ weather/
 └── packages/
     ├── config-typescript/.dockerignore
     ├── database/.dockerignore
+    ├── shared/.dockerignore
     └── types/.dockerignore
 ```
 

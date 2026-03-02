@@ -1,6 +1,14 @@
+import {
+  AuthProvider,
+  DataProvider,
+  LocationProvider,
+  useAuth,
+  useData,
+} from "@weather/shared/contexts";
+import { WebStorageAdapter } from "@weather/shared/utils";
 import type { AnalystReport } from "@weather/types";
 import type React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AnalystReportForm } from "./components/Analyst/AnalystReport/AnalystReportForm";
 import { AnalyticsDashboard } from "./components/Analyst/AnalyticsDashboard";
 import { AuthForm } from "./components/Auth/AuthForm";
@@ -16,9 +24,7 @@ import IssueAdvisoryPage from "./components/Official/IssueAdvisoryPage";
 import { OfficialReportsView } from "./components/Official/OfficialReportsView";
 import { EditProfilePage } from "./components/Profile/EditProfilePage";
 import SocialMonitor from "./components/Social/SocialMonitor";
-import { AuthProvider, useAuth } from "./contexts/AuthContext";
-import { DataProvider, useData } from "./contexts/DataContext";
-import { LocationProvider } from "./contexts/LocationContext";
+import { useLocation } from "./contexts/LocationContext";
 
 interface CustomWindow extends Window {
   navigateTo?: (page: string) => void;
@@ -49,7 +55,7 @@ const AppContent: React.FC = () => {
   useEffect(() => {
     (window as CustomWindow).navigateTo = setCurrentPage;
     return () => {
-      delete (window as CustomWindow).navigateTo;
+      (window as CustomWindow).navigateTo = undefined;
     };
   }, []);
 
@@ -57,7 +63,7 @@ const AppContent: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gap-blue text-white">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-ocean-blue mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-ocean-blue mx-auto mb-4" />
           <h1 className="text-3xl font-bold mb-2">Weather</h1>
           <p className="opacity-80">Weather Reporting Engine</p>
         </div>
@@ -183,17 +189,27 @@ const AppContent: React.FC = () => {
   );
 };
 
-// trigger hot reload
-function App() {
+const App: React.FC = () => {
+  const storageAdapter = useMemo(() => new WebStorageAdapter(), []);
+
   return (
-    <AuthProvider>
+    <AuthProvider storage={storageAdapter}>
       <LocationProvider>
-        <DataProvider>
-          <AppContent />
-        </DataProvider>
+        <DataProviderWrapper />
       </LocationProvider>
     </AuthProvider>
   );
-}
+};
+
+// Wrapper to access selectedLocation from LocationContext
+const DataProviderWrapper: React.FC = () => {
+  const { selectedLocation } = useLocation();
+
+  return (
+    <DataProvider selectedLocation={selectedLocation}>
+      <AppContent />
+    </DataProvider>
+  );
+};
 
 export default App;

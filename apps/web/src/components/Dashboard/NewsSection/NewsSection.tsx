@@ -81,14 +81,14 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
     return (
       <div className={`hazard-card ${className || ""}`}>
         <div className="animate-pulse space-y-4">
-          <div className="h-6 bg-neutral-200 rounded-sm w-1/3"></div>
+          <div className="h-6 bg-neutral-200 rounded-sm w-1/3" />
           <div className="space-y-3">
             {[...Array(3)].map((_, i) => (
               <div key={i} className="flex space-x-4">
-                <div className="w-20 h-16 bg-neutral-200 rounded-sm"></div>
+                <div className="w-20 h-16 bg-neutral-200 rounded-sm" />
                 <div className="flex-1 space-y-2">
-                  <div className="h-4 bg-neutral-200 rounded-sm"></div>
-                  <div className="h-3 bg-neutral-200 rounded-sm w-2/3"></div>
+                  <div className="h-4 bg-neutral-200 rounded-sm" />
+                  <div className="h-3 bg-neutral-200 rounded-sm w-2/3" />
                 </div>
               </div>
             ))}

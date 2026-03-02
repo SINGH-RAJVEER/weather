@@ -48,7 +48,7 @@ services:
       - CORS_ORIGINS=${CORS_ORIGINS}
     volumes:
       - ./apps/apis:/app/apps/apis
-      - ./packages:/app/packages
+      - ./packages:/app/packages  # Includes shared package for hot-reload
       - /app/node_modules
       - /app/apps/apis/node_modules
     depends_on:
@@ -74,7 +74,7 @@ services:
       - VITE_API_URL=${VITE_API_URL:-http://localhost:3001}
     volumes:
       - ./apps/web:/app/apps/web
-      - ./packages:/app/packages
+      - ./packages:/app/packages  # Includes shared package for hot-reload
       - /app/node_modules
       - /app/apps/web/node_modules
     networks:

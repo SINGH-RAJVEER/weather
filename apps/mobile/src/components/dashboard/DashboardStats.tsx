@@ -1,4 +1,4 @@
-import type { DashboardStats } from "@weather/types";
+import type { DashboardStats as DashboardStatsType } from "@weather/types";
 import {
   AlertTriangle,
   ArrowUp,
@@ -9,7 +9,7 @@ import {
 import { Text, View } from "react-native";
 
 interface DashboardStatsProps {
-  stats: DashboardStats;
+  stats: DashboardStatsType;
   isLoading?: boolean;
 }
 

@@ -8,7 +8,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "experimentalScannerIgnores": [
+    "ignore": [
       "**/node_modules/**",
       "**/dist/**",
       "**/build/**",
@@ -20,7 +20,8 @@
       "**/*.min.js",
       "**/*.min.css",
       "**/coverage/**",
-      "**/*.pyc"
+      "**/*.pyc",
+      "**/tsconfig*.json"
     ]
   },
   "formatter": {
@@ -52,6 +53,14 @@
       "correctness": {
         "noUnusedVariables": "error",
         "noUnusedImports": "error"
+      },
+      "a11y": {
+        "noLabelWithoutControl": "warn",
+        "useButtonType": "warn",
+        "useKeyWithClickEvents": "warn",
+        "noSvgWithoutTitle": "warn",
+        "useSemanticElements": "warn",
+        "noRedundantAlt": "warn"
       }
     }
   },
@@ -89,7 +98,7 @@
   },
   "overrides": [
     {
-      "includes": ["*.css"],
+      "include": ["*.css"],
       "formatter": {
         "enabled": false
       },
@@ -98,7 +107,7 @@
       }
     },
     {
-      "includes": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "include": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "linter": {
         "enabled": true
       }

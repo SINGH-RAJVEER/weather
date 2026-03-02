@@ -1,3 +1,11 @@
+import {
+  AuthProvider,
+  DataProvider,
+  LocationProvider,
+  useAuth,
+  useData,
+} from "@weather/shared/contexts";
+import { useMemo } from "react";
 import { useEffect, useState } from "react";
 import { ActivityIndicator, StatusBar, Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
@@ -11,9 +19,8 @@ import Header from "./src/components/layout/Header";
 import LiveRiskScore from "./src/components/maps/LiveRiskScore";
 // import { OfficialReportsView } from "./src/components/official/OfficialReportsView";
 import MapView from "./src/components/maps/MapView";
-import AuthProvider, { useAuth } from "./src/contexts/AuthContext";
-import DataProvider, { useData } from "./src/contexts/DataContext";
-import LocationProvider from "./src/contexts/LocationContext";
+import { useLocation } from "./src/contexts/LocationContext";
+import { AsyncStorageAdapter } from "./src/utils/storage";
 
 import "./global.css";
 
@@ -124,17 +131,28 @@ const AppContent = () => {
 };
 
 function App() {
+  const storageAdapter = useMemo(() => new AsyncStorageAdapter(), []);
+
   return (
     <SafeAreaProvider>
-      <AuthProvider>
-        <DataProvider>
-          <LocationProvider>
-            <AppContent />
-          </LocationProvider>
-        </DataProvider>
+      <AuthProvider storage={storageAdapter}>
+        <LocationProvider>
+          <DataProviderWrapper />
+        </LocationProvider>
       </AuthProvider>
     </SafeAreaProvider>
   );
 }
+
+// Wrapper to access selectedLocation from LocationContext
+const DataProviderWrapper = () => {
+  const { selectedLocation } = useLocation();
+
+  return (
+    <DataProvider selectedLocation={selectedLocation}>
+      <AppContent />
+    </DataProvider>
+  );
+};
 
 export default App;

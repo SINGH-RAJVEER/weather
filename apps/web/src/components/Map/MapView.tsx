@@ -1,6 +1,6 @@
 import L from "leaflet";
 import type React from "react";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import "leaflet.heat";
 import { useData } from "../../contexts/DataContext";
@@ -50,7 +50,7 @@ const MapView: React.FC<MapViewProps> = ({ center = [13, 85], zoom = 5 }) => {
     severityToIntensity[r.severity],
   ]);
 
-  const getMarkerIcon = (severity: string) => {
+  const getMarkerIcon = useCallback((severity: string) => {
     const colorMap: Record<string, string> = {
       critical: "red",
       high: "orange",
@@ -67,7 +67,7 @@ const MapView: React.FC<MapViewProps> = ({ center = [13, 85], zoom = 5 }) => {
       popupAnchor: [1, -34],
       shadowSize: [41, 41],
     });
-  };
+  }, []);
 
   useEffect(() => {
     if (!mapRef.current) {
